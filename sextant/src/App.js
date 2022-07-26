@@ -7,10 +7,9 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Banner bannerText="Sextant" />
-                <Exhibit name="I'm an exhibit!"></Exhibit>
-                <Exhibit name="I'm also an exhibit!"></Exhibit>
-                <Exhibit name="Don't forget about me, I'm an exhibit too!"></Exhibit>
+                <Banner bannerText="Alvin Reji" />
+                <Exhibit name="Hello!"></Exhibit>
+                <Exhibit name="Nice to meet you!"></Exhibit>
             </div>
         );
     }
