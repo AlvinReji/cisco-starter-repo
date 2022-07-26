@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Banner from './Banner';
+import Exhibit from './Exhibit';
+import AddressDisplay from './AddressDisplay';
+import PylonConnector from './PylonConnector';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <div className="App">
+                <Banner bannerText="Sextant" />
+                <Exhibit name="Public IPv4 Address">
+                    <AddressDisplay url='https://api.ipify.org?format=json' />
+                </Exhibit>
+                <Exhibit name="Public IPv6 Address">
+                    <AddressDisplay url='https://api64.ipify.org?format=json' />
+                </Exhibit>
+                <Exhibit name="Pylon Packet Latency">
+                    <PylonConnector />
+                </Exhibit>
+            </div>
+        );
+    }
 }
 
 export default App;
